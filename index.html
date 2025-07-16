@@ -63,6 +63,7 @@
             transition: gap 0.6s ease-in-out;
         }
 
+        /* UPDATED: Added :not(.scrolled) to prevent style conflicts on scroll */
         @media (min-width: 768px) { #nav-container:not(.scrolled) { gap: 40vw; } }
         @media (min-width: 1024px) { #nav-container:not(.scrolled) { gap: 50vw; } }
         @media (min-width: 1280px) { #nav-container:not(.scrolled) { gap: 60vw; } }
@@ -84,12 +85,12 @@
         #nav-container.scrolled #nav-logo {
             border-top-right-radius: 0;
             border-bottom-right-radius: 0;
+            border-right-width: 0;
         }
-        /* UPDATED: Replaced border-width with negative margin for a perfect join */
         #nav-container.scrolled #nav-menu {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
-            margin-left: -1px;
+            border-left-width: 0;
         }
 
         .project-card {
